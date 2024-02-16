@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centered Device Frame</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #ebebeb;
+        }
+
+        .rx2frame {
+            position: relative;
+            height: 90%;
+            max-height: 1360px;
+            aspect-ratio: 5/16;
+            /* background-color: #ff0000; */
+        }
+
+        img{
+            max-height: 100%;
+        }
+
+        .mainsceencontainer{
+            z-index: 1;
+            position: absolute;
+            top: 3.8%;
+            width: 73%;
+            left: 13.59%;
+            aspect-ratio: 16/39;
+            /* background-color: aqua; */
+        }
+
+        .mainsceeniframe{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="rx2frame">
+        <img src="RX1_frontal.png" alt="Device Frame"></img>
+        <div class="mainsceencontainer">
+            <iframe class="mainsceeniframe" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FSfnXUuMTsbS3iUlX5aRCtd%2FAudio-App-Prototype%3Fpage-id%3D0%253A1%26type%3Ddesign%26node-id%3D2-1801%26viewport%3D-624%252C-121%252C1.89%26t%3DaYHF4h7bRcfXsUZa-1%26scaling%3Dscale-down-width%26starting-point-node-id%3D2%253A1801%26mode%3Ddesign&hide-ui=1" allowfullscreen></iframe>
+        </div>
+    </div>
+</body>
+</html>
