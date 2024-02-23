@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,31 +12,74 @@
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <style>
         body {
+            display: flex;
+            /* background-color: aqua; */
             margin: 0;
             height: 100vh;
             width: 100vw;
+            flex-direction: column;
+            background-color: #F6F6F6;
+        }
+
+        .center-row {
+            display: flex;
+            flex-direction: row;
+            /* background-color: bisque; */
+            outline: 2px;
+            outline-color: red;
+            width: 100%;
+            height: 100%;
+            /* flex-wrap: wrap-reverse; */
+        }
+
+        .headline-container {
             display: flex;
             align-items: center;
-            flex-wrap: wrap-reverse;
-            justify-content: center;
-            background-color: #F6F6F6;
+            /* background-color: darkviolet; */
+            align-items: stretch;
+            /* height: 100%; */
+            width: 50%;
+        }
+
+        .text-box {
+            display: flex;
+            margin: 10%;
+            /* background-color: rgb(47, 144, 255); */
             align-items: center;
         }
 
-        .avatar {
-            width: 30%;
-            min-width: 300px;
+        .image-container {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            /* background-color: grey; */
+            min-width: 100px;
+            width: 50%;
+        }
+
+        footer {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            /* background-color: chartreuse; */
+            width: 100%;
+        }
+
+        .icon {
+            height: 30px;
+            width: 30px;
+            margin: 10px;
+            /* background-color: darkolivegreen; */
+        }
+
+        .image {
+            display: flex;
+            width: 100%;
+            margin: 50px;
+            max-width: 500px;
             aspect-ratio: 1/1;
-        }
-
-        img {
-            max-height: 100%;
-        }
-
-        .headlinecontainer {
-            max-width: 600px;
-            margin-left: 5%;
-            margin-right: 5%;
+            /* background-color: green; */
         }
 
         .h1 {
@@ -58,18 +101,48 @@
             -webkit-text-fill-color: transparent;
             -moz-text-fill-color: transparent;
         }
+
+        /* Responsive layout - makes a one column layout instead of a two-column layout */
+        @media (max-width: 800px) {
+            .center-row {
+                flex-direction: column-reverse;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .headline-container {
+                width: 100%;
+            }
+
+            .text-box {
+                margin-top: 0;
+            }
+
+            .image-container {
+                width: 100%;
+            }
+        }
+
     </style>
 </head>
 
 <body>
-    <div class="headlinecontainer">
-        <h1 class="h1">
-            Hi! I’m Dimitri and passionate about <span class="h1-highlight">User Experiences</span> with <span class="h1-highlight">Software</span> and <span class="h1-highlight">Hardware</span>.
-        </h1>
+    <div class="center-row">
+        <div class="headline-container">
+            <div class="text-box">
+                <h1 class="h1">
+                    Hi! I’m Dimitri and passionate about <span class="h1-highlight">User Experiences</span> with <span class="h1-highlight">Software</span> and <span class="h1-highlight">Hardware</span>.
+                </h1>
+            </div>
+        </div>
+        <div class="image-container">
+            <img class="image" src="me.png" alt="DL"></img>
+        </div>
     </div>
-    <div class="avatar">
-        <img src="me.png" alt="A Portrait of Dimitri"></img>
-    </div>
+    <footer>
+        <a href="https://www.linkedin.com/in/dimalei/" target="_blank"><img class="icon" src="in.svg"></img></a>
+        <a href="https://www.instagram.com/dedimlei/" target="_blank"><img class="icon" src="inst.svg"></img></a>
+    </footer>
 </body>
 
 </html>
